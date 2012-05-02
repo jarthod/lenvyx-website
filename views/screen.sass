@@ -10,11 +10,13 @@ span.linux
 
 span.envy
   color: #420
+
 body
   font-family: 'Ubuntu', sans-serif
   background-color: darken($warmgrey, 5%)
   color: $text
-  @include single-text-shadow(rgba(255, 255, 255, 0.2), 0, 1px, 0)
+  line-height: 1.2em
+  +single-text-shadow(rgba(255, 255, 255, 0.2), 0, 1px, 0)
   section
     header, footer, #main
       width: 1000px
@@ -23,30 +25,54 @@ body
       background-color: $warmgrey
     &#content
       background-color: $warmgrey
+      background-position: center center
       border-bottom: 1px solid rgba(255, 255, 255, 0.2)
     &#footer
       border-top: 1px solid rgba(0, 0, 0, 0.1)
 
 header
+  +clearfix
   h1
     font-size: 3em
-    padding: 0.5em 0
+    margin: 0.5em 0
+    float: left
+  .tagline
+    float: right
+    font-size: 2em
+    margin-top: 1em
+    margin-right: 1em
 
 #main
-  padding: 2em 0
+  padding: 1em 0
+  +background-image(radial-gradient(center center, ellipse contain, lighten($warmgrey, 40%) 0px, $warmgrey 100%))
 
 .intro
+  +clearfix
   h2
     font-size: 2em
-    margin-bottom: 1em
+    margin-bottom: 2em
+    text-align: center
   img.ubuntu
     float: left
   img.envy
     float: right
   .description
     clear: both
+    float: left
+    width: 40%
+  ul#features
+    li
+      padding: 0.5em 0
+      h3
+        font-size: 1.3em
+      p
+        margin: 0.3em 0
+        font-size: 0.9em
 
 footer
   font-size: 0.9em
   padding: 1em 0
   color: darken($warmgrey, 30%)
+
+p
+  text-align: justify
