@@ -24,14 +24,14 @@ set :bundle_flags, "--deployment --quiet --binstubs --shebang ruby-local-exec"
 # unicorn commands
 namespace :deploy do
   task :start, :roles => :app, :except => { :no_release => true } do
-    run 'sudo start softfocus'
+    run 'sudo start lenvyx'
   end
 
   task :stop, :roles => :app, :except => { :no_release => true } do
-    run 'sudo stop softfocus'
+    run 'sudo stop lenvyx'
   end
 
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run 'sudo restart softfocus'
+    run 'sudo restart lenvyx'
   end
 end
