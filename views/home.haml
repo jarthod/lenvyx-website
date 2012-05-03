@@ -1,15 +1,23 @@
 .intro
   %img.ubuntu{:src => url('images/ubuntu.png')}
   %img.envy{:src => url('images/envy14.png')}
-  .description
-    Lenvyx is a fork of ubuntu modified for the HP Envy laptop featuring:
-    %ul#features
-      %li.drivers
-        %h3 Drivers
-        %p Lenvyx provides good drivers for all the hardware (Ethernet, WLAN, ACPI, Graphic card...)
-      %li.switchable
-        %h3 Switchable graphics
-        %p Lenvyx handles both integrated (Intel) and discrete (ATI) graphic cards of the HP Envy, allowing live switching.
-      %li.battery
-        %h3 Battery life
-        %p Lenvyx enhance battery life by properly turning off unused graphic card and optimizing energy settings.
+  %ul#features
+    %li.drivers
+      %h3 Drivers
+      %p Lenvyx provides good drivers for all the HP Envy hardware (Ethernet, WLAN, ACPI, Graphic card...)
+    %li.switchable
+      %h3 Switchable graphics
+      %p Lenvyx handles both integrated (Intel) and discrete (ATI) graphic cards of the HP Envy, allowing live switching.
+    %li.battery
+      %h3 Battery life
+      %p Lenvyx enhance battery life by properly turning off unused graphic card and optimizing energy settings.
+  .download
+    %a{:href => '#', :class => 'cd button disabled'}
+      %img{:src => url('images/cd.png')}
+      Download now
+    %br
+    ↳ It not ready yet! but you check our
+    %br
+    %a{:href => 'https://github.com/sudeepn/Lenvyx', :class => 'icon github'} github
+    or
+    %a{:href => 'https://twitter.com/lenvyx', :class => 'icon twitter'} twitter

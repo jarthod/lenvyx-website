@@ -1,22 +1,84 @@
 @import "compass"
 
 $warmgrey: #AEA79F
-$text: #222
+$text: #321
+$link: #820
 
-@include global-reset
+@mixin button-look($primaryColor, $secondaryColor)
+  +background(linear-gradient(top, $primaryColor, $secondaryColor))
+  border-color: darken($primaryColor, 20%) darken($primaryColor, 20%) darken($primaryColor, 30%)
 
-span.linux
-  color: #920
+@mixin nice-button-hover
+  +button-look(lighten($warmgrey, 15%), darken($warmgrey, 0%))
 
-span.envy
-  color: #420
+@mixin nice-button-active
+  +box-shadow(0 1px 2px rgba(0,0,0,0.4))
+  +button-look(darken($warmgrey, 15%), darken($warmgrey, 5%))
+  border-color: rgba(0, 0, 0, 0.3)
+
+@mixin nice-button-disabled
+  opacity: 0.4
+  $shadow: inset 0 1px 2px rgba(255,255,255,0.4), 0 1px 2px rgba(0,0,0,0.3)
+  +box-shadow($shadow)
+  +button-look($warmgrey, darken($warmgrey, 15%))
+  cursor: default
+
+@mixin nice-button
+  font-size: 1.2em
+  font-weight: normal
+  line-height: 36px
+  height: 36px
+  padding: 0.2em 0.8em 0.2em 0.5em
+  display: inline-block
+  color: black
+  border-width: 1px
+  border-style: solid
+  +border-radius(3px)
+  $shadow: inset 0 1px 2px rgba(255,255,255,0.4), 0 1px 2px rgba(0,0,0,0.3)
+  +box-shadow($shadow)
+  +button-look($warmgrey, darken($warmgrey, 15%))
+  text-shadow: 0 1px 1px rgba(255,255,255,.5)
+  cursor: pointer
+  text-align: center
+  &:hover
+    +nice-button-hover
+  &:active
+    +nice-button-active
+  &.disabled
+    +nice-button-disabled
+
++global-reset
+
+a
+  color: $link
+  text-decoration: none
+  &:hover
+    color: #510
+  &.button
+    +nice-button
+    margin: 1em
+    vertical-align: middle
+    img
+      float: left
+      margin-right: 0.5em
+  &.icon
+    display: inline-block
+    line-height: 36px
+    height: 36px
+    padding-left: 40px
+    padding-right: 0.5em
+    background-position: left center
+    background-repeat: no-repeat
+    &.github
+      background-image: url(/images/github.png)
+    &.twitter
+      background-image: url(/images/twitter.png)
 
 body
   font-family: 'Ubuntu', sans-serif
   background-color: darken($warmgrey, 5%)
   color: $text
-  line-height: 1.2em
-  +single-text-shadow(rgba(255, 255, 255, 0.2), 0, 1px, 0)
+  +single-text-shadow(rgba(255, 255, 255, 0.3), 0, 1px, 1px)
   section
     header, footer, #main
       width: 1000px
@@ -27,24 +89,27 @@ body
       background-color: $warmgrey
       background-position: center center
       border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+      +background-image(radial-gradient(center center, ellipse contain, lighten($warmgrey, 30%) 0px, $warmgrey 100%))
     &#footer
       border-top: 1px solid rgba(0, 0, 0, 0.1)
 
 header
   +clearfix
+  display: block
+  padding-bottom: 1em
   h1
-    font-size: 3em
-    margin: 0.5em 0
+    font-size: 4em
+    padding: 0.5em 0
     float: left
   .tagline
     float: right
-    font-size: 2em
-    margin-top: 1em
-    margin-right: 1em
+    font-size: 1.8em
+    padding-top: 2em
+    width: 550px
+    text-align: center
 
 #main
   padding: 1em 0
-  +background-image(radial-gradient(center center, ellipse contain, lighten($warmgrey, 40%) 0px, $warmgrey 100%))
 
 .intro
   +clearfix
@@ -56,23 +121,40 @@ header
     float: left
   img.envy
     float: right
-  .description
+    margin-bottom: 1em
+  ul#features
     clear: both
     float: left
-    width: 40%
-  ul#features
+    width: 400px
     li
-      padding: 0.5em 0
+      background: url('/images/cog.png') left top no-repeat
+      padding-left: 50px
+      margin-top: 1.5em
       h3
         font-size: 1.3em
+        font-weight: 500
+        color: black
       p
-        margin: 0.3em 0
+        margin: 0.5em 0
         font-size: 0.9em
+      &.battery
+        background-image: url('/images/battery.png')
+      &.switchable
+        background-image: url('/images/shuffle.png')
+  .download
+    width: 550px
+    float: right
+    text-align: center
+    padding-top: 3em
+    line-height: 3em
+
 
 footer
   font-size: 0.9em
+  line-height: 1.5em
   padding: 1em 0
   color: darken($warmgrey, 30%)
 
 p
   text-align: justify
+  line-height: 1.4em

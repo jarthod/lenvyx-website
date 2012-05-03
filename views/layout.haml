@@ -5,24 +5,20 @@
     %meta{:name => 'Description', :content => "Lenvyx is a Linux distribution specially crafted for the HP Envy laptop based on Ubuntu"}
     %meta{:'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}
     %link{:rel => "stylesheet", :type => "text/css", :href => "/screen.css"}
-    %link{:href => 'http://fonts.googleapis.com/css?family=Ubuntu', :rel => 'stylesheet', :type => 'text/css'}
+    %link{:href => 'http://fonts.googleapis.com/css?family=Ubuntu:400,500', :rel => 'stylesheet', :type => 'text/css'}
   %body
     %section#head
       %header
         %h1
-          %span.linux L
-          %span.envy> envy
-          %span.linux x
+          Lenvyx
         .tagline
-          It's ubuntu
-          %span.linux Linux
-          for your
-          %span.envy HP Envy
+          It's ubuntu Linux for your HP Envy
     %section#content
       #main= yield
     %section#footer
       %footer
-        Distribution built by 
-        %strong Sudeep Nayak
-        Website designed and built by 
-        %strong Adrien Jarthon
+        → Distribution built by 
+        %a{:href => 'https://github.com/sudeepn'} Sudeep Nayak
+        %br
+        → Website designed and built by 
+        %a{:href => 'http://adrienjarthon.com'} Adrien Jarthon
