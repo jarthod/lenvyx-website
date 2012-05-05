@@ -6,6 +6,7 @@ set :application, "lenvyx website"
 # Repository
 set :scm, :git
 set :repository,  "git@github.com:jarthod/lenvyx-website"
+set :deploy_via, :remote_cache
 
 # Server
 server "lambda.rootbox.fr", :app, :web, :db, :primary => true
