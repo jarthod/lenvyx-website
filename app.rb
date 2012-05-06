@@ -51,7 +51,7 @@ get '/download' do
   if release = RELEASES.last
     # log download time for statistics
     Download.create :release => release[:name]
-    file = File.join('releases', "lenvyx-#{release[:name]}.iso")
+    file = File.join(settings.root, 'releases', "lenvyx-#{release[:name]}.iso")
     send_file file, :disposition => 'attachment'
   else
     redirect '/'
