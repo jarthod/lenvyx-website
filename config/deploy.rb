@@ -9,7 +9,7 @@ set :repository,  "git@github.com:jarthod/lenvyx-website"
 set :deploy_via, :remote_cache
 
 # Server
-server "lambda.rootbox.fr", :app, :web, :db, :primary => true
+server "lenvyx.rootbox.fr", :app, :web, :db, :primary => true
 set :user, :deploy
 set :deploy_to, "/home/deploy/lenvyx"
 set :use_sudo, false
@@ -36,3 +36,12 @@ namespace :deploy do
     run 'sudo restart lenvyx'
   end
 end
+
+# custom symlink
+namespace :config do
+  task :symlinks, :roles => :app do
+    run "ln -fs #{shared_path}/releases #{release_path}/releases"
+  end
+end
+
+after "deploy:update_code", "config:symlinks"
