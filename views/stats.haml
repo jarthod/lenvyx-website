@@ -1,0 +1,4 @@
+%figure#stats
+  - (Date.today-30).upto(Date.today) do |date|
+    %div.bar{:style => "height: #{rand(30)/10.0}em"}
+  %figcaption download volume by day
