@@ -40,7 +40,7 @@ end
 # custom symlink
 namespace :config do
   task :symlinks, :roles => :app do
-    run "ln -fs #{shared_path}/releases #{release_path}/releases"
+    run "ln -fs #{shared_path}/releases #{release_path}/public/releases"
   end
 end
 
