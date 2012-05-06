@@ -5,6 +5,7 @@ require 'sass'
 require 'compass'
 require 'mongoid'
 require 'sinatra/mongoid'
+require 'sinatra/xsendfile'
 
 set :mongo_db, 'lenvyx'
 

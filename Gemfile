@@ -5,7 +5,7 @@ gem 'sass'
 gem 'compass'
 gem 'mongoid'
 gem 'bson_ext'
-gem 'sinatra-mongoid', :require => 'sinatra/mongoid'
+gem 'sinatra-mongoid'
 gem 'sinatra-xsendfile'
 
 group :test, :development do
