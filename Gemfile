@@ -5,7 +5,6 @@ gem 'sass'
 gem 'compass'
 gem 'mongoid'
 gem 'bson_ext'
-gem 'sinatra-mongoid'
 gem 'sinatra-xsendfile'
 
 group :test, :development do

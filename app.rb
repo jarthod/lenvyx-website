@@ -4,10 +4,10 @@ require 'haml'
 require 'sass'
 require 'compass'
 require 'mongoid'
-require 'sinatra/mongoid'
 require 'sinatra/xsendfile'
 
-set :mongo_db, 'lenvyx'
+# MongoDB connection
+Mongoid.database = Mongo::Connection.new('localhost', Mongo::Connection::DEFAULT_PORT).db('lenvyx')
 
 # lenvyx releases
 RELEASES = [
