@@ -13,10 +13,18 @@
       %p Lenvyx enhances battery life by properly turning off unused graphic card and optimizing energy settings.
   .download
     =# haml :stats
-    %a{:href => '#', :class => 'cd button disabled'}
-      %img{:src => url('images/cd.png')}
-      Download now
-    %p ↳ It not ready yet! but you can check our
-    %a{:href => 'https://github.com/sudeepn/Lenvyx', :class => 'icon github'} github
-    or
-    %a{:href => 'https://twitter.com/lenvyx', :class => 'icon twitter'} twitter
+    %h2 There's two ways to install lenvyx:
+    %section#iso
+      %h3 Download the full ISO
+      %p.details Containing Ubuntu 12.04 already patched, burn it to install a fresh new system.
+      %a{:href => '#', :class => 'button disabled'}
+        %img{:src => url('images/cd.png')}
+        Download ISO
+      %p ↳ Not ready yet, use the scripts →
+    %section#patch
+      %h3 Patch your current setup
+      %p.details Run the scripts from our git repository to enhance your current Ubuntu system
+      %a{:href => 'https://github.com/sudeepn/Lenvyx', :class => 'button'}
+        %img{:src => url('images/github.png')}
+        Download scripts
+    %a{:href => 'https://twitter.com/lenvyx', :class => 'icon twitter'} follow us on twitter for updates
