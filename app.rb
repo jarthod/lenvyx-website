@@ -39,7 +39,11 @@ class Download
 end
 
 get '/' do
-  haml :home
+  if request.host.split('.').size > 2 and not development?
+    redirect 'http://lenvyx.com'
+  else
+    haml :home
+  end
 end
 
 get '/screen.css' do
