@@ -1,8 +1,8 @@
 source :rubygems
 gem 'sinatra', '1.3.2'
-gem 'haml', '~> 3.1.4'
-gem 'sass', '~> 3.1.15'
-gem 'compass', '~> 0.12.1'
+gem 'haml', '~> 3.1'
+gem 'sass', '~> 3.1'
+gem 'compass', '~> 0.12'
 gem 'mongoid', '2.4.10'
 gem 'bson_ext'
 gem 'sinatra-xsendfile', '0.4.0'
