@@ -7,7 +7,7 @@ require 'mongoid'
 require 'sinatra/xsendfile'
 
 # MongoDB connection
-Mongoid.database = Mongo::Connection.new('localhost', Mongo::Connection::DEFAULT_PORT).db('lenvyx')
+Mongoid.load!('config/mongoid.yml')
 
 # lenvyx releases
 RELEASES = [

@@ -1,0 +1,18 @@
+development:
+  sessions:
+    default:
+      database: lenvyx
+      hosts:
+        - localhost:27017
+test:
+  sessions:
+    default:
+      database: lenvyx
+      hosts:
+        - localhost:27017
+production:
+  sessions:
+    default:
+      database: lenvyx
+      hosts:
+        - localhost:27017
