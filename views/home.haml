@@ -20,7 +20,11 @@
       %a{:href => '#', :class => 'button disabled'}
         %img{:src => url('images/cd.png')}
         Download ISO
-      %p ↳ Not ready yet, use the scripts →
+      %p
+        ↳ Not ready yet, use the scripts →
+        %br
+        %a{:href => '/download/1.0-alpha'}
+          or download the old release (11.04)      
     %section#patch
       %h3 Patch your current setup
       %p.details Run the scripts from our git repository to enhance your current Ubuntu system

@@ -51,13 +51,13 @@ get '/screen.css' do
   sass :screen
 end
 
-get '/download' do
-  if release = RELEASES.last
+get '/download/?:version?' do |version|
+  if release = (version ? RELEASES.select {|r| r[:name] == version} : RELEASES).last
     # log download time for statistics
     Download.create :release => release[:name]
     file = File.join(settings.public_folder, 'releases', "lenvyx-#{release[:name]}.iso")
     send_file file, :disposition => 'attachment'
   else
-    redirect '/'
+    404
   end
 end
