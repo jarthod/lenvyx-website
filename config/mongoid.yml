@@ -10,8 +10,8 @@ test:
       database: lenvyx_test
       hosts:
         - localhost:27017
-      <% if ENV['DB_USER'] %>
-      username: <%= ENV['DB_USER'] %>
+      <% if ENV['DB_PWD'] %>
+      username: lenvyx
       password: <%= ENV['DB_PWD'] %>
       <% end %>
 production:
@@ -21,4 +21,4 @@ production:
       hosts:
         - localhost:27017
       username: lenvyx
-      password: lg8Dw49D5225hU1
+      password: <%= ENV['DB_PWD'] %>
