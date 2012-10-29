@@ -1,18 +1,24 @@
 development:
   sessions:
     default:
-      database: lenvyx
+      database: lenvyx_dev
       hosts:
         - localhost:27017
 test:
   sessions:
     default:
-      database: lenvyx
+      database: lenvyx_test
       hosts:
         - localhost:27017
+      <% if ENV['DB_USER'] %>
+      username: <%= ENV['DB_USER'] %>
+      password: <%= ENV['DB_PWD'] %>
+      <% end %>
 production:
   sessions:
     default:
       database: lenvyx
       hosts:
         - localhost:27017
+      username: lenvyx
+      password: lg8Dw49D5225hU1
