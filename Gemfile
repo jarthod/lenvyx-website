@@ -16,5 +16,5 @@ group :test, :development do
 end
 
 group :production do
-  gem 'unicorn', '4.3.1'
+  gem 'thin'
 end
