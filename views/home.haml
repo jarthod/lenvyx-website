@@ -3,35 +3,28 @@
   %img.envy{:src => url('images/envy14.png')}
   %ul#features
     %li.drivers
-      %h3 Drivers
-      %p Lenvyx provides good drivers for all the HP Envy hardware (Ethernet, WLAN, ACPI, Graphic card...)
-    %li.switchable
-      %h3 Switchable graphics
-      %p Lenvyx handles both integrated (Intel) and discrete (ATI) graphic cards of the HP Envy, allowing live switching.
+      %h3 Tunning
+      %p Lenvyx provides better default settings for the HP Envy hardware (Touchpad, Screen, ...)
     %li.battery
       %h3 Battery life
       %p Lenvyx enhances battery life by properly turning off unused graphic card and optimizing energy settings.
+    %li.switchable
+      %h3 Switchable graphics
+      %p Lenvyx handles both integrated (Intel) and discrete (ATI) graphic cards of the HP Envy.
   .download
-    =# haml :stats
     %h2 There's two ways to install lenvyx:
     %section#iso
-      %h3 Download the full ISO
-      %p.details Containing Ubuntu 12.04 already patched, burn it to install a fresh new system.
-      %a{:href => '#', :class => 'button disabled'}
+      %h3 Download the old ISO
+      %p.details This is the first Lenvyx release based on Ubuntu 11.04 available as an ISO image.
+      %a{:href => 'http://epsilon.rootbox.fr/lenvyx.iso', :class => 'button'}
         %img{:src => url('images/cd.png')}
         Download ISO
-      %p
-        ↳ Not ready yet, use the scripts →
-        %br
-        %a{:href => '/download/1.0-alpha'}
-          or download the old release (11.04)      
     %section#patch
       %h3 Patch your current setup
       %p.details Run the scripts from our git repository to enhance your current Ubuntu system
-      %a{:href => 'https://github.com/sudeepn/Lenvyx', :class => 'button'}
+      %a{:href => 'https://github.com/sudeepn/Lenvyx#how-to-install', :class => 'button'}
         %img{:src => url('images/github.png')}
-        Download scripts
-      %p
-        %a{:href => 'https://github.com/sudeepn/Lenvyx#from-scripts'}
-          Quick installation guide
+        Instructions
+      %p.recommended
+        ★ Recommended
     %a{:href => 'https://twitter.com/lenvyx', :class => 'icon twitter'} follow us on twitter for updates
