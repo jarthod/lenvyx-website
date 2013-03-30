@@ -1,4 +1,5 @@
-source :rubygems
+source 'https://rubygems'
+
 gem 'sinatra'
 gem 'haml'
 gem 'sass'
