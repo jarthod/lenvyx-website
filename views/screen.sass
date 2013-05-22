@@ -80,11 +80,13 @@ body
   color: $text
   +single-text-shadow(rgba(255, 255, 255, 0.3), 0, 1px, 1px)
   section
-    header, footer, #main
+    header, footer, #main, .warning
       width: 1000px
       margin: 0 auto
-    &#head
+    &#head, &#warning
       background-color: $warmgrey
+    &#warning
+      padding-bottom: 1em
     &#content
       background-color: $warmgrey
       background-position: center center
@@ -118,6 +120,14 @@ h3
 
 #main
   padding: 2em 0
+
+.warning
+  text-align: center
+  background-color: #dd4814
+  color: white
+  +single-text-shadow(rgba(0, 0, 0, 0.3), 0, 1px, 1px)
+  +border-radius(5px)
+  padding: 1em
 
 .intro
   +clearfix

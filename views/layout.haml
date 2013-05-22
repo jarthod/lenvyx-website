@@ -1,12 +1,12 @@
 !!!
 %html{:lang => 'en'}
   %head
-    %title Lenvyx - linux for your HP Envy
+    %title Lenvyx - Ubuntu linux for your HP Envy
     %meta{:name => 'Description', :content => "Lenvyx is a Linux distribution specially crafted for the HP Envy laptop based on Ubuntu"}
     %meta{:'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}
     %link{:rel => "stylesheet", :type => "text/css", :href => "/screen.css"}
     %link{:rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Ubuntu:400,500'}
-    %link{:rel => "shortcut icon", :href => "/favicon.png"} 
+    %link{:rel => "shortcut icon", :href => "/favicon.png"}
     = haml :analytics
   %body
     %section#head
@@ -15,6 +15,11 @@
           Lenvyx
         .tagline
           It's ubuntu Linux for your HP Envy
+    %section#warning
+      %p.warning
+        The Lenvyx project has been abandonned by its creator – Sudeep Nayak – in 2012.<br />
+        I (Adrien Jarthon) am still maintaining the website, twitter and scripts, but I do not have the skills nor time to improve lenvyx.<br />
+        The project is totaly usable, it's just limited to the features below. Any help is appreciated (test, advices, pull requests, ...).
     %section#content
       #main= yield
     %section#footer
@@ -23,8 +28,8 @@
           We are not HP or Hewlett Packard Corporation
           %br
           and are not associated with HP in any way!
-        ★ Distribution built by 
+        ★ Distribution built by
         %a{:href => 'https://github.com/sudeepn'} Sudeep Nayak
         %br
-        ★ Website designed and built by 
+        ★ Website designed and built by
         %a{:href => 'http://adrienjarthon.com'} Adrien Jarthon
